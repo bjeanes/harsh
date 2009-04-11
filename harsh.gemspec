@@ -1,6 +1,3 @@
-(in /Users/bjeanes/Projects/harsh)
-# -*- encoding: utf-8 -*-
-
 Gem::Specification.new do |s|
   s.name = %q{harsh}
   s.version = "0.1.0"
