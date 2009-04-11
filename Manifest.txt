@@ -1,0 +1,8 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+lib/harsh.rb
+tasks/harsh_tasks.rake
+test/harsh_test.rb
+test/test_helper.rb

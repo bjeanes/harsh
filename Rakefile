@@ -1,6 +1,25 @@
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
+require 'hoe'
+require File.join(File.dirname(__FILE__), "lib", "harsh")
+
+
+class Hoe 
+   # Dirty hack to eliminate Hoe from gem dependencies
+   def extra_deps 
+      @extra_deps.delete_if{ |x| x.first == 'hoe' }
+   end
+end
+
+Hoe.new('harsh', Harsh::Version * ".") do |p|
+  p.author = "Michael J Edgar"
+  p.email = "adgar@carboni.ca"
+  p.summary = "Harsh: Another Rails Syntax Highlighter"
+  p.extra_deps << ['bjeanes-ultraviolet', '>= 0.10.0']
+  p.extra_deps << ['textpow', '>= 0.10.0']
+end
+
 
 desc 'Default: run unit tests.'
 task :default => :test

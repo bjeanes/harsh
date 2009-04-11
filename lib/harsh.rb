@@ -1,5 +1,7 @@
 # Harsh
 module Harsh
+  Version = [0, 1, 0]
+  
   module ErbMethods
     def syntax_highlight(*args, &block)
       require 'uv'
